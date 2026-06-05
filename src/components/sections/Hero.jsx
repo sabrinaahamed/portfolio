@@ -42,7 +42,7 @@ const Hero = () => {
 
             <div className="flex flex-wrap gap-4 mt-10">
               <button className="bg-violet-600 hover:bg-violet-700 transition text-white px-8 py-4 rounded-xl shadow-lg">
-                Download CV
+                Download Resume
               </button>
 
               <button className="border-2 border-violet-600 text-violet-600 px-8 py-4 rounded-xl hover:bg-violet-600 hover:text-white transition">
