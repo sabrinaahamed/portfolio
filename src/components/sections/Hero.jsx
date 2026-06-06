@@ -8,17 +8,14 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-32 overflow-visible"
+      className="relative  min-h-[90vh] flex items-center py-16 overflow-visible"
     >
-      
-
       <div className="absolute top-20 left-0 w-80 h-80 bg-violet-500/20 blur-[120px] rounded-full"></div>
 
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400/20 blur-[150px] rounded-full"></div>
 
       <Container>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-
           {/* Left Content */}
 
           <motion.div
@@ -32,7 +29,9 @@ const Hero = () => {
 
             <h1 className="mt-6 text-5xl md:text-6xl xl:text-7xl font-bold leading-tight">
               Hello, I'm
-              <span className="block text-4xl text-violet-600">Sabrina Ahamed</span>
+              <span className="block text-4xl text-violet-600">
+                Sabrina Ahamed
+              </span>
             </h1>
 
             <p className="mt-6 text-slate-600 text-lg leading-relaxed max-w-xl">
@@ -51,7 +50,6 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-
           </motion.div>
 
           {/* Right Content */}
