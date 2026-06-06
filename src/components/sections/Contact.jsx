@@ -18,24 +18,21 @@ const Contact = () => {
         {/* Heading */}
 
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="text-violet-600 font-medium mb-4">
-            Contact
-          </p>
+          <p className="text-violet-600 font-medium mb-4">Contact</p>
 
           <h2 className="text-5xl md:text-6xl font-bold">
             Let's Work Together
           </h2>
 
           <p className="mt-6 text-slate-500 text-lg">
-            Have a project in mind or just want to say hello?
-            Feel free to reach out.
+            Have a project in mind or just want to say hello? Feel free to reach
+            out.
           </p>
         </div>
 
         {/* Main Content */}
 
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-stretch">
-
           {/* Left Card */}
 
           <div
@@ -50,17 +47,13 @@ const Contact = () => {
               flex-col
             "
           >
-            <h3 className="text-3xl font-bold mb-3">
-              Contact Information
-            </h3>
+            <h3 className="text-3xl font-bold mb-3">Contact Information</h3>
 
             <p className="text-slate-500 mb-10">
-              Feel free to contact me through any of the
-              platforms below.
+              Feel free to contact me through any of the platforms below.
             </p>
 
             <div className="space-y-4">
-
               {/* Email */}
 
               <a
@@ -92,13 +85,9 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <p className="text-sm text-slate-400">
-                    Email
-                  </p>
+                  <p className="text-sm text-slate-400">Email</p>
 
-                  <p className="font-medium">
-                    youremail@example.com
-                  </p>
+                  <p className="font-medium">youremail@example.com</p>
                 </div>
               </a>
 
@@ -133,28 +122,19 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <p className="text-sm text-slate-400">
-                    Phone
-                  </p>
+                  <p className="text-sm text-slate-400">Phone</p>
 
-                  <p className="font-medium">
-                    +8801XXXXXXXXX
-                  </p>
+                  <p className="font-medium">+8801XXXXXXXXX</p>
                 </div>
               </a>
-
             </div>
 
             {/* Socials */}
 
             <div className="mt-10">
-
-              <h4 className="font-semibold mb-4">
-                Follow Me
-              </h4>
+              <h4 className="font-semibold mb-4">Follow Me</h4>
 
               <div className="flex flex-wrap gap-4">
-
                 <a
                   href="https://facebook.com/"
                   target="_blank"
@@ -234,7 +214,6 @@ const Contact = () => {
                 >
                   <FaLinkedinIn />
                 </a>
-
               </div>
             </div>
           </div>
@@ -252,9 +231,7 @@ const Contact = () => {
             "
           >
             <form className="space-y-6">
-
               <div className="grid md:grid-cols-2 gap-6">
-
                 <input
                   type="text"
                   placeholder="Your Name"
@@ -282,7 +259,6 @@ const Contact = () => {
                     focus:border-violet-500
                   "
                 />
-
               </div>
 
               <input
@@ -329,10 +305,8 @@ const Contact = () => {
               >
                 Send Message
               </button>
-
             </form>
           </div>
-
         </div>
       </Container>
     </section>
