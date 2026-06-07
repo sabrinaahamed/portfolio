@@ -7,15 +7,16 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex items-center py-16 overflow-hidden"
+      className="relative overflow-hidden pt-24 pb-20 md:pt-32 md:pb-28"
     >
-      <div className="absolute top-10 left-0 w-96 h-96 bg-violet-400/15 blur-[140px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 right-10 w-80 h-80 bg-purple-300/20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-violet-400/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-300/15 blur-[130px] rounded-full pointer-events-none" />
 
       <Container>
-        <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 xl:gap-12 items-center">
 
-          <div className="flex flex-col">
+          {/* LEFT */}
+          <div className="flex flex-col order-2 lg:order-1">
 
             <motion.span
               initial={{ opacity: 0, y: 16 }}
@@ -31,7 +32,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-5 text-5xl md:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight"
+              className="mt-5 text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight"
             >
               Hello, I'm
             </motion.h1>
@@ -42,7 +43,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="mt-1"
             >
-              <span className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-violet-600 via-purple-500 to-indigo-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+              <span className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-violet-600 via-purple-500 to-indigo-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
                 Sabrina Ahamed
               </span>
             </motion.div>
@@ -82,27 +83,28 @@ const Hero = () => {
             </motion.div>
           </div>
 
+          {/* RIGHT */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end order-1 lg:order-2"
           >
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-violet-400/30 to-purple-400/20 blur-2xl rounded-[50px] pointer-events-none" />
+              <div className="absolute -inset-4 bg-gradient-to-br from-violet-400/25 to-purple-400/15 blur-2xl rounded-[50px] pointer-events-none" />
 
-              <div className="relative bg-white/70 backdrop-blur-md p-4 rounded-[36px] shadow-2xl border border-violet-100">
+              <div className="relative bg-white/70 backdrop-blur-md p-3 rounded-[32px] shadow-2xl border border-violet-100">
                 <img
                   src={profileImg}
                   alt="Sabrina Ahamed"
-                  className="w-[300px] sm:w-[340px] md:w-[380px] lg:w-[400px] rounded-[26px] object-cover block"
+                  className="w-[280px] sm:w-[340px] md:w-[380px] lg:w-[420px] xl:w-[460px] rounded-[24px] object-cover object-top block"
                 />
               </div>
 
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
-                className="absolute -right-4 bottom-8 bg-white/90 backdrop-blur-sm border border-violet-100 rounded-2xl shadow-lg px-5 py-3"
+                className="absolute -right-6 bottom-10 bg-white/90 backdrop-blur-sm border border-violet-100 rounded-2xl shadow-lg px-5 py-3"
               >
                 <p className="font-semibold text-sm text-slate-700">React • Next.js</p>
               </motion.div>
