@@ -9,3 +9,13 @@ body {
   color: #0f172a;
   font-family: Inter, sans-serif;
 }
+
+@keyframes gradientShift {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-gradient {
+  animation: gradientShift 4s linear infinite;
+  background-size: 200% auto;
+}

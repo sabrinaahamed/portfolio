@@ -1,39 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Container from "../ui/Container";
 import profileImg from "../../assets/profile.png";
 
-const name = "Sabrina Ahamed";
-
 const Hero = () => {
-  const [displayedLetters, setDisplayedLetters] = useState(0);
-  const [cursorVisible, setCursorVisible] = useState(true);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      const interval = setInterval(() => {
-        setDisplayedLetters((prev) => {
-          if (prev >= name.length) {
-            clearInterval(interval);
-            return prev;
-          }
-          return prev + 1;
-        });
-      }, 80);
-      return () => clearInterval(interval);
-    }, 700);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
-    if (displayedLetters >= name.length) {
-      const t = setTimeout(() => setCursorVisible(false), 1200);
-      return () => clearTimeout(t);
-    }
-    const interval = setInterval(() => setCursorVisible((v) => !v), 500);
-    return () => clearInterval(interval);
-  }, [displayedLetters]);
-
   return (
     <section
       id="home"
@@ -67,25 +37,20 @@ const Hero = () => {
             </motion.h1>
 
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3, delay: 0.6 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="mt-1"
             >
-              <span className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-violet-600 leading-tight tracking-tight">
-                {name.slice(0, displayedLetters)}
-                <span
-                  className={`inline-block w-[3px] h-[1em] bg-violet-500 align-middle ml-0.5 transition-opacity duration-100 ${
-                    cursorVisible ? "opacity-100" : "opacity-0"
-                  }`}
-                />
+              <span className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-violet-600 via-purple-500 to-indigo-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                Sabrina Ahamed
               </span>
             </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
               className="mt-6 text-slate-500 text-base md:text-lg leading-relaxed max-w-md"
             >
               I build modern, responsive and interactive web applications using
@@ -95,23 +60,25 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.1 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
               className="flex flex-wrap gap-4 mt-8"
             >
-              <a
-                href="/resume.pdf"
-                download
-                className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 active:scale-95 transition-all duration-200 text-white px-7 py-3.5 rounded-xl shadow-lg shadow-violet-200 font-medium text-sm md:text-base"
+              <button
+                onClick={() => window.open("/resume.pdf")}
+                className="bg-violet-600 hover:bg-violet-700 active:scale-95 transition-all duration-200 text-white px-7 py-3.5 rounded-xl shadow-lg shadow-violet-200 font-medium text-sm md:text-base"
               >
                 Download Resume
-              </a>
+              </button>
 
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 border-2 border-violet-500 text-violet-600 hover:bg-violet-600 hover:text-white active:scale-95 transition-all duration-200 px-7 py-3.5 rounded-xl font-medium text-sm md:text-base"
+              <button
+                onClick={() => {
+                  const el = document.getElementById("contact");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="border-2 border-violet-500 text-violet-600 hover:bg-violet-600 hover:text-white active:scale-95 transition-all duration-200 px-7 py-3.5 rounded-xl font-medium text-sm md:text-base"
               >
                 Contact Me
-              </a>
+              </button>
             </motion.div>
           </div>
 
