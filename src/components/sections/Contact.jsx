@@ -97,13 +97,7 @@ const Contact = () => {
               </a>
             </div>
 
-            {/* Availability badge */}
-            <div className="mt-6 flex items-center gap-3 p-4 rounded-2xl bg-emerald-50 border border-emerald-100">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-              <p className="text-sm font-medium text-emerald-700">
-                Available for freelance & full-time opportunities
-              </p>
-            </div>
+         
 
             {/* Socials */}
             <div className="mt-8">
